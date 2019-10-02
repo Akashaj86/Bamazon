@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 connection.connect();
 
 var display = function () {
-    connection.query("SELECT * FROM products", function(err, res) {
+    connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
         console.log("---------------------------");
         console.log("   Welcome to Bamazon   ");
@@ -20,21 +20,21 @@ var display = function () {
         console.log("");
         console.log("Find Your Product Below");
         console.log("");
-    });
-    var table = new Table({
-        head: ["Product Id", "Product Description", "Cost"],
-        colWidths: [12, 50, 8],
-        colAligns: ["center", "left", "right"],
-        style: {
-            head: ["aqua"],
-            compact: true
+        var table = new Table({
+            head: ["Product Id", "Product Description", "Cost"],
+            colWidths: [12, 50, 8],
+            colAligns: ["center", "left", "right"],
+            style: {
+                head: ["aqua"],
+                compact: true
+            }
+        });
+        for (var i = 0; i < res.length; i++) {
+            table.push([res[i].id, res[i].products_name, res[i].price]);
         }
-    });
-    for (var i = 0; i < res.length; i++) {
-        table.push([res[i].id, res[i].products_name, res[i].price]);
-    }
-    console.log(table.toString());
-    console.log("");
+        console.log(table.toString());
+        console.log("");
 
+    });
 };
 display();
