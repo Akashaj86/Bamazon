@@ -1,0 +1,26 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "This app is an Amazon-like storefront. The app takes in orders from customers and depletes stock from the store's inventory.",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "cli-table2": "^0.2.0",
+    "inquirer": "^7.0.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akashaj86/Bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akashaj86/Bamazon/issues"
+  },
+  "homepage": "https://github.com/Akashaj86/Bamazon#readme"
+}
